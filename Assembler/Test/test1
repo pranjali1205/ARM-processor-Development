@@ -1,0 +1,33 @@
+16
+3
+li R8 0 
+4
+swi R8 R14 204 
+4
+lwi R8 R14 204 
+4
+lwi R7 R14 200 
+4
+swi R8 R7 0 
+4
+lwi R8 R13 56 
+3
+li R9 1 
+4
+add R10 R8 R9 
+4
+swi R10 R13 56 
+3
+li R8 1001 
+4
+swi R8 R14 208 
+4
+lwi R8 R14 208 
+4
+swi R8 R14 -16 
+3
+li R8 36512 
+4
+swi R8 R14 -8 
+4
+addi R14 R14 -100 

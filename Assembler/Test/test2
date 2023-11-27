@@ -1,0 +1,23 @@
+11
+4
+mul R10 R8 R9
+2
+jeq 128 
+2
+jmp 4
+3
+li R8 20 
+4
+swi R8 R14 -8 
+4
+addi R14 R14 -248
+4
+sub R10 R9 R8
+2
+jr R10
+3
+cmp R8 R0
+4
+eq R10 R8 R9
+4
+mod R10 R8 R9
