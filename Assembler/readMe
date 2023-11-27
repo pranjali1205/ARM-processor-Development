@@ -1,0 +1,4 @@
+#Instruction file for Assembler Usage
+    1. Compiler the Assember.cpp: g++ Assembler.cpp -o assembler
+    2. Pass [source_file_name] to the assembler and pass it to a text file: ./assembler < [source_file_name] > [destination_file_name]
+    3. Check output
