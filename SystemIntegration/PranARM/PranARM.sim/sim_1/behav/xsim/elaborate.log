@@ -1,0 +1,30 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 6313ca8eb5ae46dd81e3565f6a51388a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Datapath_behav xil_defaultlib.Datapath xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ps2_rx
+Compiling module xil_defaultlib.keyboard
+Compiling module xil_defaultlib.key2ascii
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.Display_Memory
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.Memory
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=6.0,C...
+Compiling module unisims_ver.MMCME2_BASE(CLKFBOUT_MULT_F=6.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.TMDS_encoder
+Compiling module unisims_ver.OBUFDS
+Compiling module xil_defaultlib.DisplayDriver_default
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Datapath_behav

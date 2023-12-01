@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ALU.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ControlUnit.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Encoder.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Extend.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Memory.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/RegisterFile.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_ROM.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_memory.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/displayDriver.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/display_memory.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/keyboard.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ps2.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/scanToAscii.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/top.v" \
+"../../../../PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/incrementalBuild.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

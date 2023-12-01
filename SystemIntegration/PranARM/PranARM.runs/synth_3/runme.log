@@ -1,0 +1,837 @@
+
+*** Running vivado
+    with args -log Datapath.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Datapath.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Datapath.tcl -notrace
+Command: synth_design -top Datapath -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19932 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 456.066 ; gain = 95.879
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/incrementalBuild.v:1]
+	Parameter scheduler_loc bound to: 18'b000010010110100100 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/incrementalBuild.v:10]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "true" *) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/incrementalBuild.v:84]
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'keyboard' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/keyboard.v:1]
+	Parameter lowercase bound to: 0 - type: integer 
+	Parameter break bound to: 1 - type: integer 
+	Parameter shift bound to: 2 - type: integer 
+	Parameter ignore_shift_break bound to: 3 - type: integer 
+	Parameter BREAK bound to: 8'b11110000 
+	Parameter SHIFT1 bound to: 8'b00010010 
+	Parameter SHIFT2 bound to: 8'b01011001 
+INFO: [Synth 8-6157] synthesizing module 'ps2_rx' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ps2.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ps2.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_rx' (1#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ps2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'keyboard' (2#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/keyboard.v:1]
+INFO: [Synth 8-6157] synthesizing module 'key2ascii' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/scanToAscii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'key2ascii' (3#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/scanToAscii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (4#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Display_Memory' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/display_memory.v:1]
+INFO: [Synth 8-3876] $readmem data file 'display.mem' is read successfully [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/display_memory.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'Display_Memory' (5#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/display_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_memory.v:2]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_memory.v:14]
+INFO: [Synth 8-3876] $readmem data file 'ram.mem' is read successfully [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_memory.v:18]
+INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM byte_write[0].RAM_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM byte_write[1].RAM_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM byte_write[2].RAM_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM byte_write[3].RAM_reg 
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (6#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_ROM.v:1]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_ROM.v:9]
+INFO: [Synth 8-3876] $readmem data file 'os.mem' is read successfully [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_ROM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (7#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/memory/device_ROM.v:1]
+INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM byte_write[1].RAM_reg 
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (8#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'DisplayDriver' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/displayDriver.v:1]
+	Parameter memOffset bound to: 0 - type: integer 
+	Parameter hx bound to: 2 - type: integer 
+	Parameter yx bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [E:/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (9#1) [E:/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [E:/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26837]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 6.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 1.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 30 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 3 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (10#1) [E:/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26837]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [E:/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (11#1) [E:/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6157] synthesizing module 'TMDS_encoder' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Encoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TMDS_encoder' (12#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Encoder.v:3]
+WARNING: [Synth 8-3848] Net PWRDWN in module/entity DisplayDriver does not have driver. [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/displayDriver.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'DisplayDriver' (13#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/displayDriver.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/RegisterFile.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (14#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/RegisterFile.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ALU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (15#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Extend' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Extend.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Extend' (16#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Extend.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ControlUnit.v:2]
+	Parameter Reset bound to: 0 - type: integer 
+	Parameter Fetch bound to: 1 - type: integer 
+	Parameter Decode bound to: 2 - type: integer 
+	Parameter MemAdr bound to: 3 - type: integer 
+	Parameter MemRead bound to: 4 - type: integer 
+	Parameter MemWB bound to: 5 - type: integer 
+	Parameter MemWrite bound to: 6 - type: integer 
+	Parameter ExecuteR bound to: 7 - type: integer 
+	Parameter ExecuteI bound to: 8 - type: integer 
+	Parameter AluWB bound to: 9 - type: integer 
+	Parameter Branch bound to: 10 - type: integer 
+	Parameter InterruptState1 bound to: 11 - type: integer 
+	Parameter InterruptState2 bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (17#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ControlUnit.v:2]
+INFO: [Synth 8-5772] Detected attribute (* ram_decomp = "power" *) on RAM byte_write[1].RAM_reg 
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (18#1) [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/incrementalBuild.v:1]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[17]
+WARNING: [Synth 8-3331] design RAM has unconnected port address[16]
+WARNING: [Synth 8-3331] design Display_Memory has unconnected port address[15]
+WARNING: [Synth 8-3331] design Display_Memory has unconnected port address[14]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[31]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[30]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[29]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[28]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[27]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[26]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[25]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[24]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[23]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[22]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[21]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[20]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[19]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[18]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[17]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[16]
+WARNING: [Synth 8-3331] design ps2_rx has unconnected port clk
+WARNING: [Synth 8-3331] design ps2_rx has unconnected port reset
+WARNING: [Synth 8-3331] design ps2_rx has unconnected port rx_en
+WARNING: [Synth 8-3331] design keyboard has unconnected port ascii[7]
+WARNING: [Synth 8-3331] design keyboard has unconnected port ascii[6]
+WARNING: [Synth 8-3331] design keyboard has unconnected port ascii[5]
+WARNING: [Synth 8-3331] design keyboard has unconnected port ascii[4]
+WARNING: [Synth 8-3331] design top has unconnected port je[7]
+WARNING: [Synth 8-3331] design top has unconnected port je[6]
+WARNING: [Synth 8-3331] design top has unconnected port je[5]
+WARNING: [Synth 8-3331] design top has unconnected port je[4]
+WARNING: [Synth 8-3331] design top has unconnected port je[3]
+WARNING: [Synth 8-3331] design top has unconnected port je[2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 533.926 ; gain = 173.738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 533.926 ; gain = 173.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 533.926 ; gain = 173.738
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/CSD_Proj/PranARM/PranARM.srcs/constrs_1/new/MasterXDC.xdc]
+WARNING: [Vivado 12-507] No nets matched 'je_IBUF[1]'. [E:/CSD_Proj/PranARM/PranARM.srcs/constrs_1/new/MasterXDC.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/CSD_Proj/PranARM/PranARM.srcs/constrs_1/new/MasterXDC.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-161] Invalid option value '1' specified for 'objects'. [E:/CSD_Proj/PranARM/PranARM.srcs/constrs_1/new/MasterXDC.xdc:41]
+Finished Parsing XDC File [E:/CSD_Proj/PranARM/PranARM.srcs/constrs_1/new/MasterXDC.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/CSD_Proj/PranARM/PranARM.srcs/constrs_1/new/MasterXDC.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Datapath_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Datapath_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 896.445 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 896.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 4 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 896.445 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 896.445 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 896.445 ; gain = 536.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 896.445 ; gain = 536.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 896.445 ; gain = 536.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "scan_code_ready" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5547] Trying to map ROM "ROM" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5546] ROM "readKeyboard" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "readKeyboard" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/Encoder.v:20]
+INFO: [Synth 8-5546] ROM "CounterY" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "registerFile_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "registerFile_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "zreg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "IRWrite" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "PCWrite0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "memIsWrite" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RegSrc20" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ResultSrc0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextState12" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nextState12" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AlusrcB1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 896.445 ; gain = 536.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     29 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   8 Input      4 Bit       Adders := 6     
+	   7 Input      4 Bit       Adders := 3     
+	   3 Input      4 Bit       Adders := 3     
+	   6 Input      4 Bit       Adders := 3     
+	   3 Input      3 Bit       Adders := 3     
++---XORs : 
+	   2 Input      8 Bit         XORs := 3     
+	   3 Input      7 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 22    
+	               29 Bit    Registers := 1     
+	               10 Bit    Registers := 9     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---RAMs : 
+	              75K Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 15    
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   5 Input     10 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 40    
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 28    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Datapath 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     29 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               29 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module ps2_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 2     
+Module keyboard 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module key2ascii 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+Module Display_Memory 
+Detailed RTL Component Info : 
++---RAMs : 
+	              75K Bit         RAMs := 1     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+Module RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module ROM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module Memory 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module TMDS_encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   8 Input      4 Bit       Adders := 2     
+	   7 Input      4 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
+	   6 Input      4 Bit       Adders := 1     
+	   3 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   3 Input      7 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module DisplayDriver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module RegisterFile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 16    
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Extend 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+Module ControlUnit 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 31    
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "readKeyboard" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CounterY" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/ALU.v:28]
+DSP Report: Generating DSP out4, operation Mode is: A*B.
+DSP Report: operator out4 is absorbed into DSP out4.
+DSP Report: operator out4 is absorbed into DSP out4.
+DSP Report: Generating DSP out4, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator out4 is absorbed into DSP out4.
+DSP Report: operator out4 is absorbed into DSP out4.
+DSP Report: Generating DSP out4, operation Mode is: A*B.
+DSP Report: operator out4 is absorbed into DSP out4.
+DSP Report: operator out4 is absorbed into DSP out4.
+DSP Report: Generating DSP out4, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator out4 is absorbed into DSP out4.
+DSP Report: operator out4 is absorbed into DSP out4.
+INFO: [Synth 8-5544] ROM "AlusrcB1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[31]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[30]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[29]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[28]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[27]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[26]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[25]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[24]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[23]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[22]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[21]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[20]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[19]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[18]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[17]
+WARNING: [Synth 8-3331] design Memory has unconnected port displayAddr[16]
+WARNING: [Synth 8-3331] design top has unconnected port je[7]
+WARNING: [Synth 8-3331] design top has unconnected port je[6]
+WARNING: [Synth 8-3331] design top has unconnected port je[5]
+WARNING: [Synth 8-3331] design top has unconnected port je[4]
+WARNING: [Synth 8-3331] design top has unconnected port je[3]
+WARNING: [Synth 8-3331] design top has unconnected port je[2]
+WARNING: [Synth 8-3331] design top has unconnected port sysclk
+WARNING: [Synth 8-6849] Infeasible attribute ram_style = "block" set for RAM mem/ram/byte_write[1].RAM_reg,trying to implement using LUTRAM
+INFO: [Synth 8-3886] merging instance 'dis/encode_G/genblk1.TMDS_reg[9]' (FD) to 'dis/encode_G/genblk1.TMDS_reg[6]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_B/genblk1.TMDS_reg[8]' (FD) to 'dis/encode_B/genblk1.TMDS_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_G/genblk1.TMDS_reg[8]' (FD) to 'dis/encode_R/genblk1.TMDS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_G/genblk1.TMDS_reg[7]' (FD) to 'dis/encode_G/genblk1.TMDS_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_R/genblk1.TMDS_reg[7]' (FD) to 'dis/encode_R/genblk1.TMDS_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_G/genblk1.TMDS_reg[6]' (FD) to 'dis/encode_G/genblk1.TMDS_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_R/genblk1.TMDS_reg[6]' (FD) to 'dis/encode_R/genblk1.TMDS_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_B/genblk1.TMDS_reg[5]' (FD) to 'dis/encode_B/genblk1.TMDS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_B/genblk1.TMDS_reg[4]' (FD) to 'dis/encode_B/genblk1.TMDS_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dis/encode_B/genblk1.balance_acc_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dis/encode_B/genblk1.balance_acc_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dis/encode_B/genblk1.balance_acc_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dis/encode_B/genblk1.balance_acc_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dis/encode_G/genblk1.TMDS_reg[1]' (FD) to 'dis/encode_G/genblk1.TMDS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dis/encode_R/genblk1.TMDS_reg[1]' (FD) to 'dis/encode_R/genblk1.TMDS_reg[0]'
+INFO: [Synth 8-3886] merging instance 'keyb/kb_unit/current_state_reg[1]' (FDR) to 'keyb/kb_unit/current_state_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (keyb/\kb_unit/current_state_reg[2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 896.445 ; gain = 536.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+-------------------------------------+---------------+----------------+
+|Module Name | RTL Object                          | Depth x Width | Implemented As | 
++------------+-------------------------------------+---------------+----------------+
+|key2ascii   | ascii_code                          | 256x7         | LUT            | 
+|key2ascii   | ascii_code                          | 256x7         | LUT            | 
+|top         | kb_unit/ps2_rx_unit/rx_data_reg_rep | 256x7         | Block RAM      | 
+|top         | kb_unit/ps2_rx_unit/rx_data_reg_rep | 256x7         | Block RAM      | 
++------------+-------------------------------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-------------------------------+-----------+----------------------+-------------------------------------------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives                                      | 
++------------+-------------------------------+-----------+----------------------+-------------------------------------------------+
+|Datapath    | mem/ram/byte_write[1].RAM_reg | Implied   | 16 K x 32            | RAM256X1S x 2048                                | 
+|Datapath    | mem/disMem/memory_reg         | Implied   | 4 K x 32             | RAM32X1D x 32  RAM64X1D x 32  RAM128X1D x 576   | 
++------------+-------------------------------+-----------+----------------------+-------------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance keyb/i_0/kb_unit/ps2_rx_unit/rx_data_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/mem/rom/IR_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 972.555 ; gain = 612.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 979.680 ; gain = 619.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+-------------------------------+-----------+----------------------+-------------------------------------------------+
+|Module Name | RTL Object                    | Inference | Size (Depth x Width) | Primitives                                      | 
++------------+-------------------------------+-----------+----------------------+-------------------------------------------------+
+|Datapath    | mem/ram/byte_write[1].RAM_reg | Implied   | 16 K x 32            | RAM256X1S x 2048                                | 
+|Datapath    | mem/disMem/memory_reg         | Implied   | 4 K x 32             | RAM32X1D x 32  RAM64X1D x 32  RAM128X1D x 576   | 
++------------+-------------------------------+-----------+----------------------+-------------------------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance keyb/kb_unit/ps2_rx_unit/rx_data_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance mem/rom/IR_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/incrementalBuild.v:112]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [E:/CSD_Proj/PranARM/PranARM.srcs/sources_1/imports/ProcessorDesignARM/processor/incrementalBuild.v:199]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     6|
+|2     |CARRY4      |   629|
+|3     |DSP48E1     |     3|
+|4     |LUT1        |   146|
+|5     |LUT2        |   203|
+|6     |LUT3        |  2018|
+|7     |LUT4        |   165|
+|8     |LUT5        |   341|
+|9     |LUT6        |  1766|
+|10    |MMCME2_BASE |     1|
+|11    |MUXF7       |   436|
+|12    |MUXF8       |   206|
+|13    |RAM128X1D   |   576|
+|14    |RAM256X1S   |  2048|
+|15    |RAM32X1D    |    32|
+|16    |RAM64X1D    |    32|
+|17    |RAMB18E1    |     1|
+|18    |RAMB36E1    |     1|
+|19    |RAMB36E1_1  |     1|
+|20    |RAMB36E1_10 |     1|
+|21    |RAMB36E1_11 |     1|
+|22    |RAMB36E1_12 |     1|
+|23    |RAMB36E1_13 |     1|
+|24    |RAMB36E1_14 |     1|
+|25    |RAMB36E1_15 |     1|
+|26    |RAMB36E1_2  |     1|
+|27    |RAMB36E1_3  |     1|
+|28    |RAMB36E1_4  |     1|
+|29    |RAMB36E1_5  |     1|
+|30    |RAMB36E1_6  |     1|
+|31    |RAMB36E1_7  |     1|
+|32    |RAMB36E1_8  |     1|
+|33    |RAMB36E1_9  |     1|
+|34    |FDRE        |   842|
+|35    |FDSE        |     9|
+|36    |FD_1        |     9|
+|37    |IBUF        |     3|
+|38    |OBUF        |     4|
+|39    |OBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+------------------+---------------+------+
+|      |Instance          |Module         |Cells |
++------+------------------+---------------+------+
+|1     |top               |               |  9496|
+|2     |  keyb            |top            |    36|
+|3     |    kb_unit       |keyboard       |    35|
+|4     |      ps2_rx_unit |ps2_rx         |    30|
+|5     |  alu             |ALU            |  2836|
+|6     |  cu              |ControlUnit    |  1049|
+|7     |  dis             |DisplayDriver  |   354|
+|8     |    encode_B      |TMDS_encoder   |    14|
+|9     |    encode_G      |TMDS_encoder_0 |    19|
+|10    |    encode_R      |TMDS_encoder_1 |   127|
+|11    |  mem             |Memory         |  4035|
+|12    |    disMem        |Display_Memory |   854|
+|13    |    ram           |RAM            |  3041|
+|14    |    rom           |ROM            |   119|
+|15    |  regFile         |RegisterFile   |  1000|
++------+------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 1101.449 ; gain = 741.262
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 1101.449 ; gain = 378.742
+Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 1101.449 ; gain = 741.262
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3993 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1101.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2702 instances were transformed.
+  FD_1 => FDRE (inverted pins: C): 9 instances
+  MMCME2_BASE => MMCME2_ADV: 1 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 4 instances
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 576 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 2048 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+151 Infos, 61 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 1101.449 ; gain = 754.066
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1101.449 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/CSD_Proj/PranARM/PranARM.runs/synth_3/Datapath.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Datapath_utilization_synth.rpt -pb Datapath_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 27 02:05:36 2023...

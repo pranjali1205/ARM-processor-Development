@@ -1,0 +1,448 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Nov 27 02:07:59 2023
+| Host         : Royal running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Datapath_control_sets_placed.rpt
+| Design       : Datapath
+| Device       : xc7z020
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   377 |
+| Unused register locations in slices containing registers |   128 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           10 |
+|      2 |            1 |
+|      3 |            1 |
+|      4 |            3 |
+|      7 |            1 |
+|      8 |            1 |
+|     13 |            1 |
+|    16+ |          359 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             199 |          117 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              44 |           12 |
+| Yes          | No                    | No                     |             581 |          487 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              40 |           29 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------+--------------------------------------------------+---------------------------+------------------+----------------+
+|              Clock Signal              |                   Enable Signal                  |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------------------------------+--------------------------------------------------+---------------------------+------------------+----------------+
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data[4]_i_1_n_0      |                           |                1 |              1 |
+|  keyb/kb_unit/ps2_rx_unit/rx_done_tick |                                                  |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       |                                                  |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data[3]_i_1_n_0      |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data[6]              |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data[7]              |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data[5]_i_1_n_0      |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data[1]_i_1_n_0      |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data[2]_i_1_n_0      |                           |                1 |              1 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/rx_data_reg_rep_i_2_n_0 |                           |                1 |              1 |
+|  ramIsRead                             |                                                  |                           |                2 |              2 |
+| ~counter[6]                            |                                                  |                           |                1 |              3 |
+| ~counter[6]                            |                                                  | cu/SR[0]                  |                1 |              4 |
+|  dis/clk_TMDS                          |                                                  | dis/TMDS_mod10[3]_i_1_n_0 |                1 |              4 |
+| ~je_IBUF_BUFG[1]                       | keyb/kb_unit/ps2_rx_unit/b                       |                           |                1 |              4 |
+|  dis/pixclk                            |                                                  | dis/encode_G/SR[0]        |                2 |              7 |
+|  ramIsRead                             | cu/readKeyboard                                  | cu/PC_reg[7]              |                5 |              8 |
+| ~keyb/kb_unit/scan_code_ready          |                                                  |                           |                6 |             13 |
+|  counter[6]                            | cu/IR_reg_10_66                                  |                           |                4 |             16 |
+|  counter[6]                            | cu/PC_reg[0]_1                                   |                           |                4 |             16 |
+|  counter[6]                            | cu/PC_reg[9]_12                                  |                           |                2 |             16 |
+|  counter[6]                            | cu/PC_reg[0]_4                                   |                           |                4 |             16 |
+|  counter[6]                            | cu/PC_reg[1]_1                                   |                           |                4 |             16 |
+|  counter[6]                            | cu/PC_reg[9]_11                                  |                           |                4 |             16 |
+|  counter[6]                            | cu/PC_reg[9]_2                                   |                           |                2 |             16 |
+|  counter[6]                            | cu/PC_reg[9]                                     |                           |                2 |             16 |
+|  dis/pixclk                            | dis/CounterY                                     |                           |                6 |             19 |
+|  sysclk_IBUF_BUFG                      |                                                  | counter[28]_i_1_n_0       |                8 |             29 |
+|  dis/clk_TMDS                          |                                                  |                           |                6 |             31 |
+|  counter[6]                            | cu/IR_reg_10_31                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_4                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_41                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_29                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_26                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_23                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_14                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_37                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_44                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_52                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_54                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_57                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_32                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_6                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_62                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_63                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_38                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_35                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_20                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_16                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_17                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_43                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_40                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_58                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_33                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_19                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_34                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_0                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_11                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_60                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_1                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10                                     |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_15                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_45                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_12                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_48                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_22                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_21                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_5                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_36                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_28                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_42                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_51                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[11]_2                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]                                    |                           |                8 |             32 |
+|  counter[6]                            | cu/PC                                            | cu/state_reg[3]_37        |               24 |             32 |
+|  counter[6]                            | cu/PC_reg[10]                                    |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[10]_1                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_0                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_4                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[11]                                    |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_3                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[0]_2                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_6                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_8                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[0]                                     |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_7                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[0]_0                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[11]_1                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_2                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[0]_3                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_5                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_9                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[12]_1                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[13]                                    |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_65                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_8                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[10]_0                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[10]_2                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[11]_0                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_9                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_6         |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[13]_2                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_1         |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_9         |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_5                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_0         |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_10        |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_0   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_1   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_2   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[1]_0                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_3   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_3                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_11        |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_2         |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_1                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_3         |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_7         |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_6                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_4         |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_0                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_5         |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_7                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[13]_1                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[1]                                     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_0_255_0_0_i_6_8         |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_9                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[13]_3                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_8                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_10                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/PC_reg[9]_4                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_1       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_2   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_2048_2303_0_0_i_2_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_10    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_7     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_1     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_11    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_7   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_0   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_13  |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_1   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_5   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_0       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_13    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_12    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_5     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_14    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_3   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_8   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_6   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_5   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_11  |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_8     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_2048_2303_0_0_i_2_1     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_2048_2303_0_0_i_2_3     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_2048_2303_0_0_i_2_4     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_10      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_7   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_11      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_4   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_3     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_12      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_13      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_6   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_6     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_2048_2303_0_0_i_2_5     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_14      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_11008_11263_0_0_i_2_4   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_4     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_9     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_1280_1535_0_0_i_2_0     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_10  |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_12  |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_13056_13311_0_0_i_2_9   |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_2048_2303_0_0_i_2_0     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_14    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_6       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_16    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_6     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_3     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_4     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_5     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_6     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_7     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_8     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_9     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_3     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_5888_6143_0_0_i_2_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_0     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_4     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_1     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_5       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_8       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_7     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_5888_6143_0_0_i_2       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_5888_6143_0_0_i_2_1     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_9     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_5888_6143_0_0_i_2_3     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6144_6399_0_0_i_2_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_10    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_3       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_7     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_4     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_8     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_5888_6143_0_0_i_2_4     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_1     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_16      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_11    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_12    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_1     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_2     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_2       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_7       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_5     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6144_6399_0_0_i_2_0     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_10    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_9       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_5     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_15    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_3     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_3840_4095_0_0_i_2_8     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_5888_6143_0_0_i_2_0     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_15      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6144_6399_0_0_i_2_1     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_0     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_0     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2_13    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_17      |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_256_511_0_0_i_2_4       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_6912_7167_0_0_i_2       |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_4352_4607_0_0_i_2_6     |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_9984_10239_0_0_i_2_1    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_9984_10239_0_0_i_2_0    |                           |                8 |             32 |
+|  counter[6]                            | cu/byte_write[1].RAM_reg_9984_10239_0_0_i_2      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_14                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_6                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1                        |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0                        |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_25                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_1                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_27                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_33                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_35                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_41                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_3                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_0                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_44                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_24                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_45                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_46                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_47                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_7                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_11                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_12                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_18                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_19                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_16                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_10                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_29                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_5                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_0                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_31                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_8                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_38                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_40                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_42                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_36                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_43                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_48                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_49                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_5                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_3                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_13                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_21                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_22                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_4                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_23                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_17                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_9                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_26                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_2                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_30                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_1                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_32                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_20                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_10                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_34                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__0_2                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_28                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_37                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_15                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_4                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_51                     |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_10                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_15                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_16                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_20                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_0                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_17                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_22                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_12                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_18                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_2                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_23                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_24                               |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_6                      |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_9                      |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_26                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_14                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_27                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_28                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_29                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_21                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_3                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_30                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_25                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_31                               |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_19                               |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_50                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_7                      |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_1                                |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_39                     |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_11                               |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_52                     |                           |                8 |             32 |
+|  counter[6]                            | cu/romAddress__0_carry__1_8                      |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_8                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_5                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_6                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_4                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_7                                |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_9                                |                           |                8 |             32 |
+|  counter[6]                            | cu/E[0]                                          |                           |               28 |             32 |
+|  counter[6]                            | cu/state_reg[1]_10[0]                            |                           |               26 |             32 |
+|  counter[6]                            | cu/state_reg[1]_15[0]                            |                           |               29 |             32 |
+|  counter[6]                            | cu/state_reg[1]_14[0]                            |                           |               27 |             32 |
+|  counter[6]                            | cu/state_reg[1]_17[0]                            |                           |               25 |             32 |
+|  counter[6]                            | cu/state_reg[1]_18[0]                            |                           |               26 |             32 |
+|  counter[6]                            | cu/state_reg[1]_11[0]                            |                           |               25 |             32 |
+|  counter[6]                            | cu/state_reg[1]_13[0]                            |                           |               25 |             32 |
+|  counter[6]                            | cu/state_reg[1]_5[0]                             |                           |               31 |             32 |
+|  counter[6]                            | cu/state_reg[1]_6[0]                             |                           |               26 |             32 |
+|  counter[6]                            | cu/state_reg[1]_7[0]                             |                           |               29 |             32 |
+|  counter[6]                            | mem/rom/IR_reg_7_2[0]                            |                           |               26 |             32 |
+|  counter[6]                            | mem/rom/IR_reg_7_4[0]                            |                           |               27 |             32 |
+|  counter[6]                            | mem/rom/IR_reg_7_5[0]                            |                           |               30 |             32 |
+|  counter[6]                            | mem/rom/IR_reg_7_3[0]                            |                           |               28 |             32 |
+|  counter[6]                            | cu/IR_reg_10_53                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_18                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_55                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_56                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_49                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_50                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_59                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_61                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_3                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_10                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_13                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_25                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_30                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_2                                   |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_27                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_47                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_24                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_39                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/IR_reg_10_46                                  |                           |                8 |             32 |
+|  counter[6]                            | cu/state_reg[3]_13                               |                           |                8 |             32 |
+|  counter[6]                            | ramIsRead                                        |                           |               34 |             34 |
+|  counter[6]                            | cu/state_reg[1]_9[0]                             |                           |               30 |             36 |
+|  dis/pixclk                            |                                                  |                           |               27 |             51 |
+|  counter[6]                            |                                                  |                           |               73 |             97 |
++----------------------------------------+--------------------------------------------------+---------------------------+------------------+----------------+
+
+
